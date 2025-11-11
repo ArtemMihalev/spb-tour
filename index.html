@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPB Walking Tours - Петербург, который вы не найдете в путеводителях</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">SPB Walking Tours</a>
+            <ul class="nav-links">
+                <li><a href="#tours">Экскурсии</a></li>
+                <li><a href="#about">О гиде</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Петербург, который вы не найдете в путеводителях</h1>
+            <p class="hero-subtitle">Персональные пешеходные экскурсии по скрытым уголкам Северной Венеции</p>
+            <a href="#tours" class="cta-button">Выбрать маршрут</a>
+        </div>
+    </section>
+
+    <section id="tours" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Маршруты и истории</h2>
+                <p>Откройте для себя другой Петербург — без туристических толп и стандартных маршрутов</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image tour-image-1"></div>
+                    <div class="tour-content">
+                        <h3>Васильевский остров: между небом и водой</h3>
+                        <p>Прогулка по старейшему району города с его уникальной планировкой, дворами-колодцами и атмосферой морского порта.</p>
+                        <div class="tour-details">
+                            <div class="tour-price">4000 ₽</div>
+                            <button class="learn-more" data-tour="1">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image tour-image-2"></div>
+                    <div class="tour-content">
+                        <h3>Петроградская сторона: имперский размах</h3>
+                        <p>Исследуем первый деловой центр Петербурга с его особняками, храмами и местами силы императорской семьи.</p>
+                        <div class="tour-details">
+                            <div class="tour-price">4500 ₽</div>
+                            <button class="learn-more" data-tour="2">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-image tour-image-3"></div>
+                    <div class="tour-content">
+                        <h3>Коломна: призраки старого города</h3>
+                        <p>Маршрут по самому таинственному району Петербурга, вдохновлявшему Гоголя и Достоевского.</p>
+                        <div class="tour-details">
+                            <div class="tour-price">3500 ₽</div>
+                            <button class="learn-more" data-tour="3">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h2>О вашем гиде</h2>
+                    <p>Меня зовут Алексей, и уже более 8 лет я помогаю гостям города открыть настоящий Петербург — тот, что скрыт от глаз спешащих туристов.</p>
+                    <p>Мои маршруты пролегают через тихие дворики, забытые парадные и уютные набережные, где время застыло в своей неторопливой красоте.</p>
+                    <p>Каждая экскурсия — это не просто пересказ фактов, а погружение в атмосферу города, его легенды и живые истории.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Галерея впечатлений</h2>
+                <p>Мгновения из наших прогулок по городу</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-1"></div>
+                <div class="gallery-item gallery-item-2"></div>
+                <div class="gallery-item gallery-item-3"></div>
+                <div class="gallery-item gallery-item-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Начните свое путешествие</h2>
+                <p>Забронируйте экскурсию или задайте вопрос</p>
+            </div>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour">Экскурсия</label>
+                        <select id="tour">
+                            <option value="">Выберите маршрут</option>
+                            <option value="1">Васильевский остров</option>
+                            <option value="2">Петроградская сторона</option>
+                            <option value="3">Коломна</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Отправить заявку</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Контакты</h3>
+                        <p>+7 (999) 123-45-67</p>
+                        <p>hello@spbwalkingtours.ru</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Социальные сети</h3>
+                        <div class="social-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Telegram</a>
+                            <a href="#">VK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">SPB Walking Tours</div>
+                    <p>Персональные экскурсии по Санкт-Петербургу</p>
+                </div>
+                <div class="contact-info">
+                    <p>+7 (999) 123-45-67</p>
+                    <p>hello@spbwalkingtours.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 SPB Walking Tours. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="tourModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-tour-image"></div>
+            <h3 id="modalTourTitle"></h3>
+            <p id="modalTourDescription"></p>
+            <div class="tour-details modal-details">
+                <div class="tour-price" id="modalTourPrice"></div>
+                <div id="modalTourDuration"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

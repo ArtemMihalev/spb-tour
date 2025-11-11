@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f8f5f0;
+    --stone: #e8e6e1;
+    --charcoal: #2a2a2a;
+    --gold: #b8a47e;
+    --navy: #1e2d3d;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(248, 245, 240, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--stone);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--charcoal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: 400;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(rgba(42, 42, 42, 0.3), rgba(42, 42, 42, 0.3)), url('hero-bg.jpg') center/cover;
+    color: var(--cream);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--cream);
+    color: var(--charcoal);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.tour-card {
+    background: var(--stone);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+.tour-image {
+    height: 250px;
+    position: relative;
+}
+
+.tour-image-1 { background: #3a506b; }
+.tour-image-2 { background: #5c6b73; }
+.tour-image-3 { background: #7d8597; }
+
+.tour-content {
+    padding: 30px;
+}
+
+.tour-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.tour-content p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.tour-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(42, 42, 42, 0.1);
+}
+
+.tour-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+}
+
+.learn-more {
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.learn-more:hover {
+    color: var(--gold);
+}
+
+.about-section {
+    background: var(--charcoal);
+    color: var(--cream);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    height: 500px;
+    background: var(--navy);
+    position: relative;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 300px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.gallery-item-1 { background: #415a77; }
+.gallery-item-2 { background: #778da9; }
+.gallery-item-3 { background: #e0e1dd; }
+.gallery-item-4 { background: #0d1b2a; }
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--stone);
+    background: var(--cream);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.submit-button {
+    padding: 15px;
+    background: var(--charcoal);
+    color: var(--cream);
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-button:hover {
+    background: var(--gold);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+.footer {
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(248, 245, 240, 0.1);
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 42, 42, 0.9);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--cream);
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--charcoal);
+}
+
+.modal-tour-image {
+    height: 200px;
+    background: var(--navy);
+    margin-bottom: 30px;
+}
+
+.modal-details {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .about-content,
+    .contact-content,
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.hero {
+    background: linear-gradient(rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), 
+                url('hero-bg.jpg') center/cover;
+}
+
+.tour-image-1 {
+    background: url('tour-1.jpg') center/cover;
+}
+
+.tour-image-2 {
+    background: url('tour-2.jpg') center/cover;
+}
+
+.tour-image-3 {
+    background: url('tour-3.jpg') center/cover;
+}
+
+.about-image {
+    background: url('about-guide.jpg') center/cover;
+}
+
+.gallery-item-1 {
+    background: url('gallery-1.jpg') center/cover;
+}
+
+.gallery-item-2 {
+    background: url('gallery-2.jpg') center/cover;
+}
+
+.gallery-item-3 {
+    background: url('gallery-3.jpg') center/cover;
+}
+
+.gallery-item-4 {
+    background: url('gallery-4.jpg') center/cover;
+}
+
+.modal-tour-image {
+    background: url('tour-1.jpg') center/cover;
+}
