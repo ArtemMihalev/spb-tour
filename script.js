@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
     const learnMoreButtons = document.querySelectorAll('.learn-more');
     const modal = document.getElementById('tourModal');
     const closeModal = document.querySelector('.close-modal');
